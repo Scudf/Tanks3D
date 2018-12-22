@@ -2,7 +2,6 @@
 #include "Tank.h"
 #include "GraphicScene.h"
 #include "PhysicalScene.h"
-#include "constants.h"
 #include "Game.h"
 #include "RayCastWrapper.h"
 #include "SoundManager.h"
@@ -31,7 +30,7 @@ Tank::Tank(const glm::vec3 &position)
 	getB2Body()->SetLinearDamping(1);
 	getB2Body()->GetFixtureList()->SetDensity(1);
 	getB2Body()->ResetMassData();
-	
+
 	m_tankTower = GraphicObj::Create(gs->getModel("texTower"), gs->getGLShader("texturesShader"), glm::vec3(position.x, position.y, position.z * 2 + getZ()));
 	m_tankTower->setMaterialTexture(gs->getGLTexture("textures/Tower_Diffuse.png"), gs->getGLTexture("textures/Tower_Specular.png"));
 	gs->addObject(m_tankTower);
@@ -69,12 +68,12 @@ void Tank::update(float dt)
 			ConvertMetersToPxls(getB2Body()->GetPosition()),
 			m_bulletSpawnPosition,
 			[this](const GameObj* gameObj) -> bool
-			{
-				if (this == gameObj)
-					return false;
-				else
-					return true;
-			});
+		{
+			if (this == gameObj)
+				return false;
+			else
+				return true;
+		});
 
 		if (raycast == 0)
 		{
@@ -88,7 +87,7 @@ void Tank::update(float dt)
 void Tank::physicalUpdate(float dt)
 {
 	PhysicalObj::physicalUpdate(dt);
-	
+
 	m_tankDir = glm::vec2(-sin(getB2Body()->GetAngle()), cos(getB2Body()->GetAngle()));
 
 	if (m_movementForward)

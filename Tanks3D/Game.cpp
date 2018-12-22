@@ -1,20 +1,15 @@
 #include "stdafx.h"
 #include <glew/glew.h>
 #include "Game.h"
-#include <conio.h>
-#include <Windows.h>
 
 
 Game* Game::s_instance = nullptr;
 
 Game::Game()
 	: m_lastFrameTime(0.0f)
-	, m_framesCount(0)
-	, m_timer(0.0f)
 {
 	s_instance = this;
 }
-
 
 Game::~Game()
 {
@@ -53,23 +48,6 @@ bool Game::update()
 	float deltaTime = currentFrameTime - m_lastFrameTime;
 	m_lastFrameTime = currentFrameTime;
 
-	m_timer += deltaTime;
-	//float fps = 1 / deltaTime;
-	++m_framesCount;
-
-	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-
-	if(m_framesCount < 24)
-		SetConsoleTextAttribute(handle, FOREGROUND_RED);
-	else
-		SetConsoleTextAttribute(handle, FOREGROUND_GREEN);
-		
-	if (m_timer >= 1.0f)
-	{
-		std::cout << m_framesCount << '\n';
-		m_timer = 0.0f;
-		m_framesCount = 0;
-	}
 	if (!m_soundManager->update(deltaTime))
 		return false;
 

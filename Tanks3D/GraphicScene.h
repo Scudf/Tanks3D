@@ -12,6 +12,8 @@
 #include "GraphicObj.h"
 
 
+const float BLOCK_SIZE = 100.0f;
+
 class GraphicScene
 {
 public:
@@ -27,34 +29,39 @@ public:
 		const std::string &vertexFileName,
 		const std::string &fragmentFileName);
 
-	void setLightDirection(const glm::vec3 &lightDir)	{ m_lightDirection = lightDir; m_lightIsDirty = true; }
-	void setLightAmbient(const glm::vec3 &lightAmb)		{ m_lightAmbient = lightAmb; m_lightIsDirty = true; }
-	void setLightDiffuse(const glm::vec3 &lightDiff)	{ m_lightDiffuse = lightDiff; m_lightIsDirty = true; }
-	void setLightSpecular(const glm::vec3 &lightSpec)	{ m_lightSpecular = lightSpec; m_lightIsDirty = true; }
-	void setLightIsDirty(bool isDirty)					{ m_lightIsDirty = isDirty; }
+	void setLightDirection(const glm::vec3 &lightDir) { m_lightDirection = lightDir; m_lightIsDirty = true; }
+	void setLightAmbient(const glm::vec3 &lightAmb) { m_lightAmbient = lightAmb; m_lightIsDirty = true; }
+	void setLightDiffuse(const glm::vec3 &lightDiff) { m_lightDiffuse = lightDiff; m_lightIsDirty = true; }
+	void setLightSpecular(const glm::vec3 &lightSpec) { m_lightSpecular = lightSpec; m_lightIsDirty = true; }
+	void setLightIsDirty(bool isDirty) { m_lightIsDirty = isDirty; }
 
-	bool getLightIsDirty() { return m_lightIsDirty; }
-	
-	GLFWwindow*			getWindow()	{ return m_window; }
-	const CameraPtr&	getCamera()	{ return m_camera; }
-	
-	GLuint			 getGLTexture(const std::string &imagePath)	{ return m_textures[imagePath]; }
-	const ShaderPtr& getGLShader(const std::string &shaderName)	{ return m_shaders[shaderName]; }
-	const ModelPtr&	 getModel(const std::string &modelName)		{ return m_models[modelName]; }
-	
-	glm::mat4 getMatView()		{ return m_matView; }
-	glm::mat4 getMatPersp()		{ return m_matPersp; }
-	
-	glm::vec3 getLightDirection()	{ return m_lightDirection; }
-	glm::vec3 getLightAmbient()		{ return m_lightAmbient; }
-	glm::vec3 getLightDiffuse()		{ return m_lightDiffuse; }
-	glm::vec3 getLightSpecular()	{ return m_lightSpecular; }
-	
+	const int getWidth() const { return m_width; }
+	const int getHeight() const { return m_height; }
+
+	GLFWwindow* getWindow() const { return m_window; }
+	const CameraPtr& getCamera() const { return m_camera; }
+
+	GLuint getGLTexture(const std::string &imagePath) { return m_textures[imagePath]; }
+	const ShaderPtr& getGLShader(const std::string &shaderName) { return m_shaders[shaderName]; }
+	const ModelPtr&	 getModel(const std::string &modelName) { return m_models[modelName]; }
+
+	const glm::mat4& getMatView() const { return m_matView; }
+	const glm::mat4& getMatPersp() const { return m_matPersp; }
+
+	const glm::vec3& getLightDirection() const { return m_lightDirection; }
+	const glm::vec3& getLightAmbient() const { return m_lightAmbient; }
+	const glm::vec3& getLightDiffuse() const { return m_lightDiffuse; }
+	const glm::vec3& getLightSpecular() const { return m_lightSpecular; }
+	bool getLightIsDirty() const { return m_lightIsDirty; }
+
 	void addObject(const GraphicObjPtr& object);
 	void removeObject(const GraphicObjPtr& object);
 	void removeObject(GraphicObj* object);
-	
+
 private:
+	int m_width;
+	int m_height;
+
 	GLFWwindow* m_window;
 	CameraPtr m_camera;
 

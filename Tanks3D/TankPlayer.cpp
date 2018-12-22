@@ -17,11 +17,11 @@ void TankPlayer::update(float dt)
 
 	GameScene* gs = Game::GetInstancePtr()->getGameScene();
 
-		m_movementForward				= gs->getKey(GLFW_KEY_W);
-		m_movementLeft					= gs->getKey(GLFW_KEY_A);
-		m_movementBackward				= gs->getKey(GLFW_KEY_S);
-		m_movementRight					= gs->getKey(GLFW_KEY_D);
-		m_clockwiseTowerRotate			= gs->getKey(GLFW_KEY_Q);
-		m_conterclockwiseTowerRotate	= gs->getKey(GLFW_KEY_E);
-		m_isFireAllowed					= gs->getKey(GLFW_KEY_SPACE);
+	m_movementForward = gs->getKey(GLFW_KEY_W);
+	m_movementLeft = gs->getKey(GLFW_KEY_A);
+	m_movementBackward = gs->getKey(GLFW_KEY_S);
+	m_movementRight = gs->getKey(GLFW_KEY_D);
+	m_clockwiseTowerRotate = gs->getKey(GLFW_KEY_Q);
+	m_conterclockwiseTowerRotate = gs->getKey(GLFW_KEY_E);
+	m_isFireAllowed = gs->getKey(GLFW_KEY_SPACE);
 }

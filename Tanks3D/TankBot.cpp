@@ -49,13 +49,13 @@ void TankBot::update(float dt)
 	glm::vec2 distanceToTarget = targetPosition - ConvertMetersToPxls(getB2Body()->GetPosition());
 
 	glm::vec2 v = glm::vec2(glm::normalize(distanceToTarget));
-	m_requiredAngle = (v.y >= 0 ? acosf(glm::dot(glm::vec2(1, 0), v)) 
+	m_requiredAngle = (v.y >= 0 ? acosf(glm::dot(glm::vec2(1, 0), v))
 		: -acosf(glm::dot(glm::vec2(1, 0), v)));
 
 	m_isFireAllowed = false;
 
 	float disToTargLength = sqrt(distanceToTarget.x * distanceToTarget.x + distanceToTarget.y * distanceToTarget.y);
-	
+
 	if (disToTargLength <= 1000.0f)
 	{
 		float raycast = RayCast(
@@ -103,7 +103,7 @@ void TankBot::update(float dt)
 				m_clockwiseTowerRotate = false;
 				m_conterclockwiseTowerRotate = false;
 			}
-			
+
 		}
 	}
 
@@ -119,8 +119,8 @@ void TankBot::update(float dt)
 	{
 		m_timer = 0;
 
-		m_movementForward	= (bool)(rand() % 2 - 1);
-		m_movementBackward	= (bool)(rand() % 2 - 1);
+		m_movementForward = (bool)(rand() % 2 - 1);
+		m_movementBackward = (bool)(rand() % 2 - 1);
 
 		if (!m_isFireAllowed)
 		{

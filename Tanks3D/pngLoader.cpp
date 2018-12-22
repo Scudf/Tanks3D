@@ -62,8 +62,8 @@ bool loadPng(const char* path, PngTexData& result)
 	}
 
 	fclose(file);
-	
-	
+
+
 	//std::string pngBuf;
 	//std::ifstream ifsV(path);
 	//pngBuf.assign((std::istreambuf_iterator<char>(ifsV)),
@@ -162,7 +162,7 @@ bool loadPng(const char* path, PngTexData& result)
 		result.width = width;
 		result.height = height;
 		result.data.reset(new char[rowbytes * height]);
-			
+
 		for (unsigned short i = 0; i < height; ++i)
 		{
 			row_pointers[i] = (unsigned char*)result.data.get() + i * rowbytes;

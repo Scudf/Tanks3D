@@ -15,15 +15,15 @@ public:
 	bool initialize();
 	bool update();
 
-	GameScene*		getGameScene()		{ return m_gameScene; }
-	PhysicalScene*	getPhysicalScene()	{ return m_physicalScene; }
-	GraphicScene*	getGraphicScene()	{ return m_graphicScene; }
-	SoundManager*	getSoundManager()	{ return m_soundManager; }
+	GameScene*	getGameScene() { return m_gameScene; }
+	PhysicalScene*	getPhysicalScene() { return m_physicalScene; }
+	GraphicScene*	getGraphicScene() { return m_graphicScene; }
+	SoundManager*	getSoundManager() { return m_soundManager; }
 
 	static Game* GetInstancePtr() { return s_instance; }
 
 private:
-	GameScene*		m_gameScene;
+	GameScene * m_gameScene;
 	PhysicalScene*	m_physicalScene;
 	GraphicScene*	m_graphicScene;
 	SoundManager*	m_soundManager;
@@ -31,7 +31,4 @@ private:
 	float m_lastFrameTime;
 
 	static Game* s_instance;
-
-	float m_timer;
-	int m_framesCount;
 };

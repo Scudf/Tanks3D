@@ -3,7 +3,6 @@
 #include "GameScene.h"
 #include "Game.h"
 #include "GraphicScene.h"
-#include "constants.h"
 #include "Tank.h"
 #include "TankPlayer.h"
 #include "TankBot.h"
@@ -27,15 +26,15 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 }
 
 GameScene::GameScene()
-	: m_lastX(WIDTH / 2)
-	, m_lastY(HEIGHT / 2)
-	, m_firstMouse(true)
+	: m_firstMouse(true)
 	, m_isCameraFree(false)
 	, m_cameraAnchor(0)
 	, m_cameraTarget(0)
 	, m_enemiesCount(0)
 {
-
+	GraphicScene*	gs = Game::GetInstancePtr()->getGraphicScene();
+	m_lastX = gs->getWidth() / 2;
+	m_lastY = gs->getHeight() / 2;
 }
 
 bool GameScene::initialize()
@@ -70,43 +69,43 @@ bool GameScene::initialize()
 	addObject(bull);
 
 	loadLevel("levels/level0.xml");
-	
+
 	return true;
 }
 
 bool GameScene::update(float dt)
 {
-		m_garbageCollector.clear();
+	m_garbageCollector.clear();
 
-		CameraPtr camera = Game::GetInstancePtr()->getGraphicScene()->getCamera();
-		camera->setIsFree(m_isCameraFree);
+	CameraPtr camera = Game::GetInstancePtr()->getGraphicScene()->getCamera();
+	camera->setIsFree(m_isCameraFree);
 
-		float velocity = CAMERA_SPEED * dt;
+	float velocity = CAMERA_SPEED * dt;
 
-		if (m_isCameraFree)
-		{
-			if (m_keys[GLFW_KEY_UP])
-				camera->setPosition(camera->getPosition() + camera->getFront() * velocity);
-			if (m_keys[GLFW_KEY_DOWN])
-				camera->setPosition(camera->getPosition() - camera->getFront() * velocity);
-			if (m_keys[GLFW_KEY_LEFT])
-				camera->setPosition(camera->getPosition() - camera->getRight() * velocity);
-			if (m_keys[GLFW_KEY_RIGHT])
-				camera->setPosition(camera->getPosition() + camera->getRight() * velocity);
-		}
-		else
-		{
-			m_cameraAnchor = glm::vec3(ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().x), ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().y) - 1700.0f, 1700.0f);
-			m_cameraTarget = glm::vec3(ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().x), ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().y), 0.0f);
-			camera->updateTarget(m_cameraAnchor, m_cameraTarget);
-		}
+	if (m_isCameraFree)
+	{
+		if (m_keys[GLFW_KEY_UP])
+			camera->setPosition(camera->getPosition() + camera->getFront() * velocity);
+		if (m_keys[GLFW_KEY_DOWN])
+			camera->setPosition(camera->getPosition() - camera->getFront() * velocity);
+		if (m_keys[GLFW_KEY_LEFT])
+			camera->setPosition(camera->getPosition() - camera->getRight() * velocity);
+		if (m_keys[GLFW_KEY_RIGHT])
+			camera->setPosition(camera->getPosition() + camera->getRight() * velocity);
+	}
+	else
+	{
+		m_cameraAnchor = glm::vec3(ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().x), ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().y) - 1700.0f, 1700.0f);
+		m_cameraTarget = glm::vec3(ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().x), ConvertMetersToPxls(m_tankTarget->getB2Body()->GetPosition().y), 0.0f);
+		camera->updateTarget(m_cameraAnchor, m_cameraTarget);
+	}
 
-		std::vector<GameObjPtr> temp = m_objects;
-		for (GameObjPtr object : temp)
-			object->update(dt);
+	std::vector<GameObjPtr> temp = m_objects;
+	for (GameObjPtr object : temp)
+		object->update(dt);
 
-		if (m_enemiesCount <= 0 || m_tankTarget->getHealth() <= 0)
-			return false;
+	if (m_enemiesCount <= 0 || m_tankTarget->getHealth() <= 0)
+		return false;
 
 	return true;
 }
@@ -128,7 +127,7 @@ void GameScene::processKeyCallback(GLFWwindow* window, int key, int scancode, in
 			m_keys[key] = true;
 		else if (action == GLFW_RELEASE)
 			m_keys[key] = false;
-	
+
 		if (!m_keys[GLFW_KEY_C] && key == GLFW_KEY_C)
 			m_isCameraFree = !m_isCameraFree;
 	}
@@ -167,7 +166,7 @@ void GameScene::processMouseCallback(GLFWwindow* window, double xpos, double ypo
 		camera->updateCameraVectors();
 	}
 	else
-	m_firstMouse = true;
+		m_firstMouse = true;
 }
 
 void GameScene::processScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
@@ -191,7 +190,7 @@ bool GameScene::loadLevel(const std::string &name)
 	tinyxml2::XMLError loadError = doc.LoadFile(name.c_str());
 	if (tinyxml2::XML_SUCCESS != loadError)
 	{
-	//	std::cout << "File '%s' loading error - XMLError: %d!", name.c_str(), (S32)loadError);
+		//	std::cout << "File '%s' loading error - XMLError: %d!", name.c_str(), (S32)loadError);
 		return false;
 	}
 
@@ -231,7 +230,7 @@ bool GameScene::loadLevel(const std::string &name)
 		{
 			levelChildNode = levelChildNode->NextSibling();
 			continue;
-		}	
+		}
 
 		if (strcmp(levelChildElement->Name(), "TankPlayer") == 0)
 		{

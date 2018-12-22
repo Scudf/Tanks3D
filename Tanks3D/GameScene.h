@@ -7,6 +7,9 @@
 #include "Tank.h"
 
 
+const float CAMERA_SPEED = 1000.0;
+const float MOUSE_SENSITIVTY = 0.15f;
+
 class GameScene
 {
 public:
@@ -61,7 +64,7 @@ private:
 
 	float time;
 	int sec;
-	
+
 	std::vector<GameObjPtr> m_objects;
 	std::vector<GameObjPtr> m_garbageCollector;
 };

@@ -28,7 +28,7 @@ GraphicObj::GraphicObj(
 	, m_matModelIsDirty(true)
 	, m_matModel(1)
 	, m_colorIsDirty(true)
-{	
+{
 
 }
 
@@ -78,7 +78,7 @@ void GraphicObj::render()
 		if (m_shader->hasUniform("u_light.specular"))
 			m_shader->setUniform("u_light.specular", gs->getLightSpecular());
 	}
-		
+
 	if (m_shader->hasUniform("u_color"))
 		m_shader->setUniform("u_color", m_color);
 

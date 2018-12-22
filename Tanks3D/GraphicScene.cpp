@@ -6,8 +6,13 @@
 #include "constants.h"
 
 
+const int WIDTH = 1024;
+const int HEIGHT = 768;
+
 GraphicScene::GraphicScene()
-	: m_lightDirection(0.0f, -0.5f, -1.0f)
+	: m_width(WIDTH)
+	, m_height(HEIGHT)
+	, m_lightDirection(0.0f, -0.5f, -1.0f)
 	, m_lightAmbient(0.2f, 0.2f, 0.2f)
 	, m_lightDiffuse(0.5f, 0.5f, 0.5f)
 	, m_lightSpecular(1.0f, 1.0f, 1.0f)
@@ -31,7 +36,7 @@ bool GraphicScene::initialize()
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 	glfwWindowHint(GLFW_DEPTH_BITS, 24);
 
-	m_window = glfwCreateWindow(WIDTH, HEIGHT, "Tanks3D", nullptr, nullptr);
+	m_window = glfwCreateWindow(m_width, m_height, "Tanks3D", nullptr, nullptr);
 	if (m_window == nullptr)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -92,7 +97,7 @@ bool GraphicScene::update(float dt)
 	else
 		m_matView = m_camera->getTargetViewMatrix();
 
-	m_matPersp = glm::perspective(glm::radians(m_camera->getZoom()), (GLfloat)WIDTH / HEIGHT, 0.1f, 12800.0f);
+	m_matPersp = glm::perspective(glm::radians(m_camera->getZoom()), (GLfloat)m_width / m_height, 0.1f, 12800.0f);
 
 	std::vector<GraphicObjPtr> temp = m_objects;
 	for (GraphicObjPtr object : temp)

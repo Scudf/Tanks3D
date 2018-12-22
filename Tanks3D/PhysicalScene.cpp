@@ -1,22 +1,22 @@
 #include "stdafx.h"
 #include "PhysicalScene.h"
-#include "constants.h"
 #include "GameObj.h"
+#include "GraphicScene.h"
 
 
-float ConvertPxlsToMeters(float pixels)	{ return pixels / pxlsPerMeter; }
-float ConvertMetersToPxls(float meters)	{ return meters * pxlsPerMeter; }
+float ConvertPxlsToMeters(float pixels) { return pixels / pxlsPerMeter; }
+float ConvertMetersToPxls(float meters) { return meters * pxlsPerMeter; }
 
 b2Vec2 ConvertPxlsToMeters(const glm::vec2 &pixels) { return b2Vec2(pixels.x / pxlsPerMeter, pixels.y / pxlsPerMeter); }
 glm::vec2 ConvertMetersToPxls(const b2Vec2 &meters) { return glm::vec2(meters.x * pxlsPerMeter, meters.y * pxlsPerMeter); }
 
-b2Vec2 ConvertPxlsToMeters(float x, float y)	{ return b2Vec2(x / pxlsPerMeter, y / pxlsPerMeter); }
-glm::vec2 ConvertMetersToPxls(float x, float y)	{ return glm::vec2(x * pxlsPerMeter, y * pxlsPerMeter); }
+b2Vec2 ConvertPxlsToMeters(float x, float y) { return b2Vec2(x / pxlsPerMeter, y / pxlsPerMeter); }
+glm::vec2 ConvertMetersToPxls(float x, float y) { return glm::vec2(x * pxlsPerMeter, y * pxlsPerMeter); }
 
 PhysicalScene::PhysicalScene()
 	: m_b2World(nullptr)
 {
-	
+
 }
 
 PhysicalScene::~PhysicalScene()
@@ -85,10 +85,10 @@ void PhysicalScene::removeObject(const PhysicalObjPtr& object)
 
 void PhysicalScene::removeObject(PhysicalObj* object)
 {
-	for (std::vector<PhysicalObjPtr>::iterator	it =	m_objects.begin(),
-														end = m_objects.end();
-														it != end;
-														++it)
+	for (std::vector<PhysicalObjPtr>::iterator	it = m_objects.begin(),
+		end = m_objects.end();
+		it != end;
+		++it)
 	{
 		if ((*it).get() == object)
 		{
