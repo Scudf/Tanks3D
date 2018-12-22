@@ -1,0 +1,1292 @@
+[Устройство №0] Primary Sound Driver
+	[Аппаратные возможности]
+	- Аппаратно поддерживаются частоты дискретизации, для вторичных буферов,
+	  от 100 до 200000
+	- Аппаратно поддерживаются следующие типы сигналов:
+		Тип буфера  8 Бит 16 Бит Моно Стерео 
+		Первичный   да    да     да   да 
+		Вторичный   да    да     да   да 
+	- Аппаратно поддерживаются следующее количество буферов:
+		          2D смешивание [из них свободно] 3D смешивание [из них свобоно]
+		Всего     01            [00]              00            [00]
+		Статичных 01            [00]              00            [00]
+		Потоковых 01            [00]              00            [00]
+	- Количество первичных буферов         = 1
+	- Объем всей памяти на устройстве      = 0
+	- Объем свободной памяти на устройстве = 0
+	- Звуковые расширения
+		EAX 1.0 Не поддерживается
+		EAX 2.0 Не поддерживается
+		EAX 3.0 Не поддерживается
+		ZOOMFX Не поддерживается
+	- Поддерживаемые 3D алгоритмы
+		ALG_3D_OFF
+		ALG_3D_FULL
+		ALG_3D_LIGTH
+[Устройство №1] Динаміки/Навушники (Realtek High Definition Audio)
+	[Аппаратные возможности]
+	- Аппаратно поддерживаются частоты дискретизации, для вторичных буферов,
+	  от 100 до 200000
+	- Аппаратно поддерживаются следующие типы сигналов:
+		Тип буфера  8 Бит 16 Бит Моно Стерео 
+		Первичный   да    да     да   да 
+		Вторичный   да    да     да   да 
+	- Аппаратно поддерживаются следующее количество буферов:
+		          2D смешивание [из них свободно] 3D смешивание [из них свобоно]
+		Всего     01            [00]              00            [00]
+		Статичных 01            [00]              00            [00]
+		Потоковых 01            [00]              00            [00]
+	- Количество первичных буферов         = 1
+	- Объем всей памяти на устройстве      = 0
+	- Объем свободной памяти на устройстве = 0
+	- Звуковые расширения
+		EAX 1.0 Не поддерживается
+		EAX 2.0 Не поддерживается
+		EAX 3.0 Не поддерживается
+		ZOOMFX Не поддерживается
+	- Поддерживаемые 3D алгоритмы
+		ALG_3D_OFF
+		ALG_3D_FULL
+		ALG_3D_LIGTH
+[00:00:01.249]	SQUALL_Init(0x0)
+		[out]Window                   = 0x2804E8
+		[out]Device                   = 0
+		[out]SampleRate               = 44100
+		[out]BitPerSample             = 16
+		[out]Channels                 = 16
+		[out]UseAlg                   = 0
+		[out]BufferSize               = 200
+		[out]ListenerMode             = 0
+		[out]DistanceFactor           = 1.000000
+		[out]RolloffFactor            = 1.000000
+		[out]DopplerFactor            = 1.000000
+		[out]UseHW2D                  = 0
+		[out]UseHW3D                  = 0
+[00:00:01.406]	SQUALL_Sample_LoadFile(sounds/main.mp3, 1, 0x0)
+		result = 0x10000
+[00:00:01.406]	SQUALL_Sample_Play(0x10000, 1, 0, 0)
+		result = 0x100
+[00:00:01.421]	SQUALL_Channel_Start(0x100)
+[00:00:01.963]	SQUALL_Channel_SetVolume(0x100, 85)
+[00:00:01.970]	SQUALL_Channel_SetVolume(0xCDCDCDCD, 100)
+		error = SQUALL_ERROR_CHANNEL_NOT_FOUND
+[00:00:02.011]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 0.000000
+		[in]Position->y = 0.000000
+		[in]Position->z = 0.000000
+[00:00:02.251]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.500000
+		[in]Position->y = 2.500000
+		[in]Position->z = 0.260000
+[00:00:02.665]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:02.791]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:02.921]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.101]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.235]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.371]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.531]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.655]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.815]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.871]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:03.941]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.005]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.074]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.141]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.201]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.272]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.341]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.401]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.471]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.541]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.620]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.691]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.761]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.826]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.891]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:04.961]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:05.021]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502825
+		[in]Position->y = 2.498204
+		[in]Position->z = 0.260000
+[00:00:05.091]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502655
+		[in]Position->y = 2.531752
+		[in]Position->z = 0.260000
+[00:00:05.161]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.502327
+		[in]Position->y = 2.596716
+		[in]Position->z = 0.260000
+[00:00:05.231]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.501850
+		[in]Position->y = 2.691184
+		[in]Position->z = 0.260000
+[00:00:05.291]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.501232
+		[in]Position->y = 2.813513
+		[in]Position->z = 0.260000
+[00:00:05.361]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.500486
+		[in]Position->y = 2.961232
+		[in]Position->z = 0.260000
+[00:00:05.419]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.499617
+		[in]Position->y = 3.133433
+		[in]Position->z = 0.260000
+[00:00:05.491]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.498632
+		[in]Position->y = 3.328488
+		[in]Position->z = 0.260000
+[00:00:05.561]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.498175
+		[in]Position->y = 3.544855
+		[in]Position->z = 0.260000
+[00:00:05.620]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.499407
+		[in]Position->y = 3.780912
+		[in]Position->z = 0.260000
+[00:00:05.695]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.503909
+		[in]Position->y = 4.035719
+		[in]Position->z = 0.260000
+[00:00:05.761]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.513589
+		[in]Position->y = 4.307816
+		[in]Position->z = 0.260000
+[00:00:05.831]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.530555
+		[in]Position->y = 4.595108
+		[in]Position->z = 0.260000
+[00:00:05.831]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10001
+[00:00:05.861]	SQUALL_Sample_Play3D(0x10001, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 3.367396
+		[in]Position->y = 6.725488
+		[in]Position->z = 0.750000
+		result = 0x101
+[00:00:05.885]	SQUALL_Channel_Start(0x101)
+[00:00:05.945]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.557182
+		[in]Position->y = 4.896950
+		[in]Position->z = 0.260000
+[00:00:06.013]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.595644
+		[in]Position->y = 5.209764
+		[in]Position->z = 0.260000
+[00:00:06.081]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.704482
+		[in]Position->y = 5.784962
+		[in]Position->z = 0.260000
+[00:00:06.085]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10002
+[00:00:06.091]	SQUALL_Sample_Play3D(0x10002, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 4.267018
+		[in]Position->y = 7.461527
+		[in]Position->z = 0.750000
+		result = 0x102
+[00:00:06.105]	SQUALL_Channel_Start(0x102)
+[00:00:06.181]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.784869
+		[in]Position->y = 6.118681
+		[in]Position->z = 0.260000
+[00:00:06.241]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 2.885076
+		[in]Position->y = 6.453971
+		[in]Position->z = 0.260000
+[00:00:06.314]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 3.081984
+		[in]Position->y = 6.953994
+		[in]Position->z = 0.260000
+[00:00:06.381]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 3.234866
+		[in]Position->y = 7.278390
+		[in]Position->z = 0.260000
+[00:00:06.394]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10003
+[00:00:06.401]	SQUALL_Sample_Play3D(0x10003, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 5.369657
+		[in]Position->y = 7.996413
+		[in]Position->z = 0.750000
+		result = 0x103
+[00:00:06.420]	SQUALL_Channel_Start(0x103)
+[00:00:06.481]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 3.410659
+		[in]Position->y = 7.593513
+		[in]Position->z = 0.260000
+[00:00:06.541]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 3.608268
+		[in]Position->y = 7.895609
+		[in]Position->z = 0.260000
+[00:00:06.614]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 3.950391
+		[in]Position->y = 8.315788
+		[in]Position->z = 0.260000
+[00:00:06.681]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 4.190174
+		[in]Position->y = 8.529091
+		[in]Position->z = 0.260000
+[00:00:06.691]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10004
+[00:00:06.691]	SQUALL_Sample_Play3D(0x10004, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 6.418488
+		[in]Position->y = 9.075182
+		[in]Position->z = 0.750000
+		result = 0x104
+[00:00:06.701]	SQUALL_Channel_Start(0x104)
+[00:00:06.761]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 4.447978
+		[in]Position->y = 8.733001
+		[in]Position->z = 0.260000
+[00:00:06.851]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 4.722860
+		[in]Position->y = 8.930011
+		[in]Position->z = 0.260000
+[00:00:06.851]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10005
+[00:00:06.861]	SQUALL_Sample_Play3D(0x10005, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 10.247577
+		[in]Position->y = 14.591854
+		[in]Position->z = 0.750000
+		result = 0x105
+[00:00:06.871]	SQUALL_Channel_Start(0x105)
+[00:00:06.933]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 5.089853
+		[in]Position->y = 9.170155
+		[in]Position->z = 0.260000
+[00:00:07.001]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 5.477221
+		[in]Position->y = 9.410706
+		[in]Position->z = 0.260000
+[00:00:07.001]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10006
+[00:00:07.020]	SQUALL_Sample_Play3D(0x10006, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 7.489238
+		[in]Position->y = 10.843062
+		[in]Position->z = 0.750000
+		result = 0x106
+[00:00:07.031]	SQUALL_Channel_Start(0x106)
+[00:00:07.034]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10007
+[00:00:07.034]	SQUALL_Sample_Play3D(0x10007, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 9.658544
+		[in]Position->y = 14.196565
+		[in]Position->z = 0.750000
+		result = 0x107
+[00:00:07.041]	SQUALL_Channel_Start(0x107)
+[00:00:07.101]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 5.879099
+		[in]Position->y = 9.656702
+		[in]Position->z = 0.260000
+[00:00:07.161]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 6.208416
+		[in]Position->y = 9.861662
+		[in]Position->z = 0.260000
+[00:00:07.231]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 6.710031
+		[in]Position->y = 10.190565
+		[in]Position->z = 0.260000
+[00:00:07.301]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 7.042648
+		[in]Position->y = 10.422632
+		[in]Position->z = 0.260000
+[00:00:07.301]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10008
+[00:00:07.311]	SQUALL_Sample_Play3D(0x10008, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 8.142651
+		[in]Position->y = 12.514301
+		[in]Position->z = 0.750000
+		result = 0x201
+[00:00:07.320]	SQUALL_Channel_Start(0x201)
+[00:00:07.320]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10009
+[00:00:07.320]	SQUALL_Sample_Play3D(0x10009, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 9.441798
+		[in]Position->y = 13.260276
+		[in]Position->z = 0.750000
+		result = 0x108
+[00:00:07.341]	SQUALL_Channel_Start(0x108)
+[00:00:07.401]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 7.360238
+		[in]Position->y = 10.673695
+		[in]Position->z = 0.260000
+[00:00:07.461]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 7.677011
+		[in]Position->y = 10.937811
+		[in]Position->z = 0.260000
+[00:00:07.531]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 8.108746
+		[in]Position->y = 11.297777
+		[in]Position->z = 0.260000
+[00:00:07.601]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 8.378489
+		[in]Position->y = 11.522680
+		[in]Position->z = 0.260000
+[00:00:07.611]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1000A
+[00:00:07.620]	SQUALL_Sample_Play3D(0x1000A, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 9.023013
+		[in]Position->y = 13.677715
+		[in]Position->z = 0.750000
+		result = 0x202
+[00:00:07.634]	SQUALL_Channel_Start(0x202)
+[00:00:07.720]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 8.627999
+		[in]Position->y = 11.717112
+		[in]Position->z = 0.260000
+[00:00:07.821]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 8.858818
+		[in]Position->y = 11.883081
+		[in]Position->z = 0.260000
+[00:00:07.885]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.081017
+		[in]Position->y = 12.072031
+		[in]Position->z = 0.260000
+[00:00:08.021]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.228677
+		[in]Position->y = 12.168758
+		[in]Position->z = 0.260000
+[00:00:08.021]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1000B
+[00:00:08.031]	SQUALL_Sample_Play3D(0x1000B, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 9.000953
+		[in]Position->y = 14.183824
+		[in]Position->z = 0.750000
+		result = 0x203
+[00:00:08.042]	SQUALL_Channel_Start(0x203)
+[00:00:08.101]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.317029
+		[in]Position->y = 12.208958
+		[in]Position->z = 0.260000
+[00:00:08.171]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.476064
+		[in]Position->y = 12.214683
+		[in]Position->z = 0.260000
+[00:00:08.231]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.527098
+		[in]Position->y = 12.171665
+		[in]Position->z = 0.260000
+[00:00:08.301]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.580914
+		[in]Position->y = 12.124874
+		[in]Position->z = 0.260000
+[00:00:08.371]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.633237
+		[in]Position->y = 12.066556
+		[in]Position->z = 0.260000
+[00:00:08.371]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1000C
+[00:00:08.381]	SQUALL_Sample_Play3D(0x1000C, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 9.303306
+		[in]Position->y = 13.957564
+		[in]Position->z = 0.750000
+		result = 0x204
+[00:00:08.391]	SQUALL_Channel_Start(0x204)
+[00:00:08.452]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.685274
+		[in]Position->y = 11.994379
+		[in]Position->z = 0.260000
+[00:00:08.521]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.729822
+		[in]Position->y = 11.927108
+		[in]Position->z = 0.260000
+[00:00:08.581]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.770682
+		[in]Position->y = 11.849707
+		[in]Position->z = 0.260000
+[00:00:08.656]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.791388
+		[in]Position->y = 11.826424
+		[in]Position->z = 0.260000
+[00:00:08.725]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.803093
+		[in]Position->y = 11.839690
+		[in]Position->z = 0.260000
+[00:00:08.734]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1000D
+[00:00:08.745]	SQUALL_Sample_Play3D(0x1000D, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 10.048556
+		[in]Position->y = 13.871937
+		[in]Position->z = 0.750000
+		result = 0x301
+[00:00:08.764]	SQUALL_Channel_Start(0x301)
+[00:00:08.822]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.816028
+		[in]Position->y = 11.885501
+		[in]Position->z = 0.260000
+[00:00:08.891]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.826066
+		[in]Position->y = 11.962155
+		[in]Position->z = 0.260000
+[00:00:08.966]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.837881
+		[in]Position->y = 12.139997
+		[in]Position->z = 0.260000
+[00:00:09.041]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.846088
+		[in]Position->y = 12.284856
+		[in]Position->z = 0.260000
+[00:00:09.101]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.855618
+		[in]Position->y = 12.454004
+		[in]Position->z = 0.260000
+[00:00:09.175]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.879971
+		[in]Position->y = 12.698504
+		[in]Position->z = 0.260000
+[00:00:09.241]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.908032
+		[in]Position->y = 12.913236
+		[in]Position->z = 0.260000
+[00:00:09.322]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.949107
+		[in]Position->y = 13.144796
+		[in]Position->z = 0.260000
+[00:00:09.331]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1000E
+[00:00:09.331]	SQUALL_Sample_Play3D(0x1000E, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 10.913119
+		[in]Position->y = 15.173697
+		[in]Position->z = 0.750000
+		result = 0x302
+[00:00:09.341]	SQUALL_Channel_Start(0x302)
+[00:00:09.401]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 9.999380
+		[in]Position->y = 13.394629
+		[in]Position->z = 0.260000
+[00:00:09.485]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.074861
+		[in]Position->y = 13.726621
+		[in]Position->z = 0.260000
+[00:00:09.571]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.163280
+		[in]Position->y = 14.082651
+		[in]Position->z = 0.260000
+[00:00:09.641]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.241415
+		[in]Position->y = 14.381444
+		[in]Position->z = 0.260000
+[00:00:09.641]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1000F
+[00:00:09.651]	SQUALL_Sample_Play3D(0x1000F, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 11.125031
+		[in]Position->y = 16.709375
+		[in]Position->z = 0.750000
+		result = 0x303
+[00:00:09.661]	SQUALL_Channel_Start(0x303)
+[00:00:09.723]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.372608
+		[in]Position->y = 14.856309
+		[in]Position->z = 0.260000
+[00:00:09.791]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.465411
+		[in]Position->y = 15.185164
+		[in]Position->z = 0.260000
+[00:00:09.861]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.588219
+		[in]Position->y = 15.614228
+		[in]Position->z = 0.260000
+[00:00:09.930]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.689452
+		[in]Position->y = 15.967372
+		[in]Position->z = 0.260000
+[00:00:09.991]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.793362
+		[in]Position->y = 16.332552
+		[in]Position->z = 0.260000
+[00:00:09.991]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10010
+[00:00:10.001]	SQUALL_Sample_Play3D(0x10010, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 11.408683
+		[in]Position->y = 18.648724
+		[in]Position->z = 0.750000
+		result = 0x304
+[00:00:10.011]	SQUALL_Channel_Start(0x304)
+[00:00:10.071]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 10.900592
+		[in]Position->y = 16.714338
+		[in]Position->z = 0.260000
+[00:00:10.144]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.003188
+		[in]Position->y = 17.085850
+		[in]Position->z = 0.260000
+[00:00:10.211]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.135181
+		[in]Position->y = 17.576756
+		[in]Position->z = 0.260000
+[00:00:10.271]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.240498
+		[in]Position->y = 17.978638
+		[in]Position->z = 0.260000
+[00:00:10.341]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.340533
+		[in]Position->y = 18.388691
+		[in]Position->z = 0.260000
+[00:00:10.411]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.435795
+		[in]Position->y = 18.808121
+		[in]Position->z = 0.260000
+[00:00:10.471]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.526449
+		[in]Position->y = 19.235559
+		[in]Position->z = 0.260000
+[00:00:10.541]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.613094
+		[in]Position->y = 19.670570
+		[in]Position->z = 0.260000
+[00:00:10.611]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.696458
+		[in]Position->y = 20.112528
+		[in]Position->z = 0.260000
+[00:00:10.671]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.777367
+		[in]Position->y = 20.560652
+		[in]Position->z = 0.260000
+[00:00:10.741]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.856842
+		[in]Position->y = 21.014671
+		[in]Position->z = 0.260000
+[00:00:10.815]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 11.935682
+		[in]Position->y = 21.472610
+		[in]Position->z = 0.260000
+[00:00:10.871]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.020777
+		[in]Position->y = 21.934080
+		[in]Position->z = 0.260000
+[00:00:10.941]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.102228
+		[in]Position->y = 22.400440
+		[in]Position->z = 0.260000
+[00:00:11.014]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.186709
+		[in]Position->y = 22.865681
+		[in]Position->z = 0.260000
+[00:00:11.085]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.266597
+		[in]Position->y = 23.294012
+		[in]Position->z = 0.260000
+[00:00:11.141]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.351177
+		[in]Position->y = 23.703989
+		[in]Position->z = 0.260000
+[00:00:11.211]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.437350
+		[in]Position->y = 24.099174
+		[in]Position->z = 0.260000
+[00:00:11.281]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.519332
+		[in]Position->y = 24.478754
+		[in]Position->z = 0.260000
+[00:00:11.343]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.604051
+		[in]Position->y = 24.853815
+		[in]Position->z = 0.260000
+[00:00:11.411]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.692730
+		[in]Position->y = 25.225000
+		[in]Position->z = 0.260000
+[00:00:11.491]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.785068
+		[in]Position->y = 25.586592
+		[in]Position->z = 0.260000
+[00:00:11.561]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 12.889902
+		[in]Position->y = 25.955626
+		[in]Position->z = 0.260000
+[00:00:11.630]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.088005
+		[in]Position->y = 26.339972
+		[in]Position->z = 0.260000
+[00:00:11.691]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.255535
+		[in]Position->y = 26.664661
+		[in]Position->z = 0.260000
+[00:00:11.761]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.398291
+		[in]Position->y = 26.977783
+		[in]Position->z = 0.260000
+[00:00:11.831]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.540827
+		[in]Position->y = 27.297392
+		[in]Position->z = 0.260000
+[00:00:11.891]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.681443
+		[in]Position->y = 27.622093
+		[in]Position->z = 0.260000
+[00:00:11.961]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.817443
+		[in]Position->y = 27.952492
+		[in]Position->z = 0.260000
+[00:00:12.031]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.945477
+		[in]Position->y = 28.290533
+		[in]Position->z = 0.260000
+[00:00:12.101]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.063336
+		[in]Position->y = 28.633556
+		[in]Position->z = 0.260000
+[00:00:12.161]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.165110
+		[in]Position->y = 28.987444
+		[in]Position->z = 0.260000
+[00:00:12.231]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.222853
+		[in]Position->y = 29.330128
+		[in]Position->z = 0.260000
+[00:00:12.301]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.264074
+		[in]Position->y = 29.681368
+		[in]Position->z = 0.260000
+[00:00:12.365]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.276616
+		[in]Position->y = 30.017588
+		[in]Position->z = 0.260000
+[00:00:12.431]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.266782
+		[in]Position->y = 30.356167
+		[in]Position->z = 0.260000
+[00:00:12.502]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.244454
+		[in]Position->y = 30.696510
+		[in]Position->z = 0.260000
+[00:00:12.585]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.208155
+		[in]Position->y = 31.044384
+		[in]Position->z = 0.260000
+[00:00:12.651]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.161621
+		[in]Position->y = 31.393902
+		[in]Position->z = 0.260000
+[00:00:12.711]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.087918
+		[in]Position->y = 31.834623
+		[in]Position->z = 0.260000
+[00:00:12.785]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.019556
+		[in]Position->y = 32.195313
+		[in]Position->z = 0.260000
+[00:00:12.851]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.946236
+		[in]Position->y = 32.555061
+		[in]Position->z = 0.260000
+[00:00:12.911]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.867622
+		[in]Position->y = 32.920753
+		[in]Position->z = 0.260000
+[00:00:12.981]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.786095
+		[in]Position->y = 33.290058
+		[in]Position->z = 0.260000
+[00:00:13.051]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.702801
+		[in]Position->y = 33.669430
+		[in]Position->z = 0.260000
+[00:00:13.121]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.636999
+		[in]Position->y = 34.056416
+		[in]Position->z = 0.260000
+[00:00:13.181]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.571863
+		[in]Position->y = 34.453068
+		[in]Position->z = 0.260000
+[00:00:13.251]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.527082
+		[in]Position->y = 34.819794
+		[in]Position->z = 0.260000
+[00:00:13.321]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.522833
+		[in]Position->y = 35.184299
+		[in]Position->z = 0.260000
+[00:00:13.381]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.554379
+		[in]Position->y = 35.527115
+		[in]Position->z = 0.260000
+[00:00:13.471]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.598292
+		[in]Position->y = 35.854145
+		[in]Position->z = 0.260000
+[00:00:13.569]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.632465
+		[in]Position->y = 36.197281
+		[in]Position->z = 0.260000
+[00:00:13.684]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.665099
+		[in]Position->y = 36.640240
+		[in]Position->z = 0.260000
+[00:00:13.751]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.743930
+		[in]Position->y = 37.124138
+		[in]Position->z = 0.260000
+[00:00:13.762]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10011
+[00:00:13.762]	SQUALL_Sample_Play3D(0x10011, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 16.064209
+		[in]Position->y = 33.975517
+		[in]Position->z = 0.750000
+		result = 0x401
+[00:00:13.775]	SQUALL_Channel_Start(0x401)
+[00:00:13.831]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.817809
+		[in]Position->y = 37.730877
+		[in]Position->z = 0.260000
+[00:00:13.901]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.856211
+		[in]Position->y = 38.085354
+		[in]Position->z = 0.260000
+[00:00:13.970]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.890709
+		[in]Position->y = 38.538391
+		[in]Position->z = 0.260000
+[00:00:14.041]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.909635
+		[in]Position->y = 38.911140
+		[in]Position->z = 0.260000
+[00:00:14.101]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.900012
+		[in]Position->y = 39.344368
+		[in]Position->z = 0.260000
+[00:00:14.111]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10012
+[00:00:14.115]	SQUALL_Sample_Play3D(0x10012, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 16.149958
+		[in]Position->y = 34.145798
+		[in]Position->z = 0.750000
+		result = 0x402
+[00:00:14.125]	SQUALL_Channel_Start(0x402)
+[00:00:14.194]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.887489
+		[in]Position->y = 39.768642
+		[in]Position->z = 0.260000
+[00:00:14.255]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.873222
+		[in]Position->y = 40.193771
+		[in]Position->z = 0.260000
+[00:00:14.321]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.852285
+		[in]Position->y = 40.736366
+		[in]Position->z = 0.260000
+[00:00:14.391]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.836601
+		[in]Position->y = 41.175835
+		[in]Position->z = 0.260000
+[00:00:14.470]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.824521
+		[in]Position->y = 41.621716
+		[in]Position->z = 0.260000
+[00:00:14.481]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10013
+[00:00:14.481]	SQUALL_Sample_Play3D(0x10013, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 16.229626
+		[in]Position->y = 34.640545
+		[in]Position->z = 0.750000
+		result = 0x403
+[00:00:14.495]	SQUALL_Channel_Start(0x403)
+[00:00:14.551]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.818812
+		[in]Position->y = 42.085205
+		[in]Position->z = 0.260000
+[00:00:14.625]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.825627
+		[in]Position->y = 42.642696
+		[in]Position->z = 0.260000
+[00:00:14.691]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.852065
+		[in]Position->y = 43.216274
+		[in]Position->z = 0.260000
+[00:00:14.751]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.888383
+		[in]Position->y = 43.676109
+		[in]Position->z = 0.260000
+[00:00:14.821]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 13.940518
+		[in]Position->y = 44.134312
+		[in]Position->z = 0.260000
+[00:00:14.835]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10014
+[00:00:14.845]	SQUALL_Sample_Play3D(0x10014, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 15.172704
+		[in]Position->y = 46.218102
+		[in]Position->z = 0.750000
+		result = 0x404
+[00:00:14.855]	SQUALL_Channel_Start(0x404)
+[00:00:14.901]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.008628
+		[in]Position->y = 44.591778
+		[in]Position->z = 0.260000
+[00:00:14.970]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.091996
+		[in]Position->y = 45.047867
+		[in]Position->z = 0.260000
+[00:00:15.041]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.217829
+		[in]Position->y = 45.616085
+		[in]Position->z = 0.260000
+[00:00:15.111]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.330519
+		[in]Position->y = 46.070595
+		[in]Position->z = 0.260000
+[00:00:15.172]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.453070
+		[in]Position->y = 46.525394
+		[in]Position->z = 0.260000
+[00:00:15.181]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10015
+[00:00:15.181]	SQUALL_Sample_Play3D(0x10015, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 15.362369
+		[in]Position->y = 48.823574
+		[in]Position->z = 0.750000
+		result = 0x501
+[00:00:15.191]	SQUALL_Channel_Start(0x501)
+[00:00:15.201]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10016
+[00:00:15.201]	SQUALL_Sample_Play3D(0x10016, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 12.871202
+		[in]Position->y = 57.669571
+		[in]Position->z = 0.750000
+		result = 0x205
+[00:00:15.211]	SQUALL_Channel_Start(0x205)
+[00:00:15.275]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.583175
+		[in]Position->y = 46.981602
+		[in]Position->z = 0.260000
+[00:00:15.341]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.718073
+		[in]Position->y = 47.439701
+		[in]Position->z = 0.260000
+[00:00:15.351]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10017
+[00:00:15.351]	SQUALL_Sample_Play3D(0x10017, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 12.934810
+		[in]Position->y = 57.544769
+		[in]Position->z = 0.750000
+		result = 0x206
+[00:00:15.363]	SQUALL_Channel_Start(0x206)
+[00:00:15.421]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 14.925078
+		[in]Position->y = 48.134296
+		[in]Position->z = 0.260000
+[00:00:15.494]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.061570
+		[in]Position->y = 48.600815
+		[in]Position->z = 0.260000
+[00:00:15.501]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10018
+[00:00:15.501]	SQUALL_Sample_Play3D(0x10018, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 15.412597
+		[in]Position->y = 51.181572
+		[in]Position->z = 0.750000
+		result = 0x502
+[00:00:15.521]	SQUALL_Channel_Start(0x502)
+[00:00:15.575]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.227159
+		[in]Position->y = 49.190186
+		[in]Position->z = 0.260000
+[00:00:15.641]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.354666
+		[in]Position->y = 49.666431
+		[in]Position->z = 0.260000
+[00:00:15.651]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10019
+[00:00:15.651]	SQUALL_Sample_Play3D(0x10019, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 12.776532
+		[in]Position->y = 57.580761
+		[in]Position->z = 0.750000
+		result = 0x207
+[00:00:15.664]	SQUALL_Channel_Start(0x207)
+[00:00:15.725]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.503680
+		[in]Position->y = 50.265259
+		[in]Position->z = 0.260000
+[00:00:15.811]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.615687
+		[in]Position->y = 50.749100
+		[in]Position->z = 0.260000
+[00:00:15.821]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1001A
+[00:00:15.821]	SQUALL_Sample_Play3D(0x1001A, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 15.736359
+		[in]Position->y = 53.357662
+		[in]Position->z = 0.750000
+		result = 0x503
+[00:00:15.831]	SQUALL_Channel_Start(0x503)
+[00:00:15.895]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.743818
+		[in]Position->y = 51.357677
+		[in]Position->z = 0.260000
+[00:00:15.970]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.863873
+		[in]Position->y = 51.982174
+		[in]Position->z = 0.260000
+[00:00:15.983]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1001B
+[00:00:15.991]	SQUALL_Sample_Play3D(0x1001B, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 12.773904
+		[in]Position->y = 57.577320
+		[in]Position->z = 0.750000
+		result = 0x208
+[00:00:16.001]	SQUALL_Channel_Start(0x208)
+[00:00:16.061]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 15.972873
+		[in]Position->y = 52.589527
+		[in]Position->z = 0.260000
+[00:00:16.131]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 16.080261
+		[in]Position->y = 53.211071
+		[in]Position->z = 0.260000
+[00:00:16.135]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1001C
+[00:00:16.141]	SQUALL_Sample_Play3D(0x1001C, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 16.740602
+		[in]Position->y = 55.757816
+		[in]Position->z = 0.750000
+		result = 0x504
+[00:00:16.154]	SQUALL_Channel_Start(0x504)
+[00:00:16.231]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 16.188635
+		[in]Position->y = 53.835495
+		[in]Position->z = 0.260000
+[00:00:16.291]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 16.279329
+		[in]Position->y = 54.336884
+		[in]Position->z = 0.260000
+[00:00:16.301]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1001D
+[00:00:16.301]	SQUALL_Sample_Play3D(0x1001D, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 13.356800
+		[in]Position->y = 56.869381
+		[in]Position->z = 0.750000
+		result = 0x109
+[00:00:16.311]	SQUALL_Channel_Start(0x109)
+[00:00:16.381]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 16.429182
+		[in]Position->y = 55.087696
+		[in]Position->z = 0.260000
+[00:00:16.444]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 16.539146
+		[in]Position->y = 55.584496
+		[in]Position->z = 0.260000
+[00:00:16.451]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1001E
+[00:00:16.451]	SQUALL_Sample_Play3D(0x1001E, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 18.092304
+		[in]Position->y = 57.633820
+		[in]Position->z = 0.750000
+		result = 0x601
+[00:00:16.464]	SQUALL_Channel_Start(0x601)
+[00:00:16.531]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 16.696741
+		[in]Position->y = 56.201195
+		[in]Position->z = 0.260000
+[00:00:16.591]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 16.838121
+		[in]Position->y = 56.686993
+		[in]Position->z = 0.260000
+[00:00:16.601]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x1001F
+[00:00:16.601]	SQUALL_Sample_Play3D(0x1001F, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 13.559669
+		[in]Position->y = 56.101017
+		[in]Position->z = 0.750000
+		result = 0x305
+[00:00:16.631]	SQUALL_Channel_Start(0x305)
+[00:00:16.691]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 17.042294
+		[in]Position->y = 57.282116
+		[in]Position->z = 0.260000
+[00:00:16.764]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 17.223654
+		[in]Position->y = 57.742733
+		[in]Position->z = 0.260000
+[00:00:16.770]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10020
+[00:00:16.775]	SQUALL_Sample_Play3D(0x10020, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 19.504070
+		[in]Position->y = 58.768345
+		[in]Position->z = 0.750000
+		result = 0x306
+[00:00:16.781]	SQUALL_Channel_Start(0x306)
+[00:00:16.845]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 17.538538
+		[in]Position->y = 58.398647
+		[in]Position->z = 0.260000
+[00:00:16.914]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 17.768791
+		[in]Position->y = 58.815685
+		[in]Position->z = 0.260000
+[00:00:16.921]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10021
+[00:00:16.921]	SQUALL_Sample_Play3D(0x10021, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 13.431052
+		[in]Position->y = 56.698963
+		[in]Position->z = 0.750000
+		result = 0x602
+[00:00:16.931]	SQUALL_Channel_Start(0x602)
+[00:00:16.991]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 18.085630
+		[in]Position->y = 59.298660
+		[in]Position->z = 0.260000
+[00:00:17.065]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 18.356375
+		[in]Position->y = 59.656387
+		[in]Position->z = 0.260000
+[00:00:17.081]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10022
+[00:00:17.091]	SQUALL_Sample_Play3D(0x10022, 0, 0, 0, 0xAFF12C, 0x0)
+		[in]Position->x = 20.513861
+		[in]Position->y = 59.174088
+		[in]Position->z = 0.750000
+		result = 0x307
+[00:00:17.091]	SQUALL_Channel_Start(0x307)
+[00:00:17.161]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 18.718403
+		[in]Position->y = 60.055187
+		[in]Position->z = 0.260000
+[00:00:17.231]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 19.020020
+		[in]Position->y = 60.339500
+		[in]Position->z = 0.260000
+[00:00:17.241]	SQUALL_Sample_LoadFile(sounds/shot.mp3, 1, 0x0)
+		result = 0x10023
+[00:00:17.245]	SQUALL_Sample_Play3D(0x10023, 0, 0, 0, 0xAFF070, 0x0)
+		[in]Position->x = 13.329301
+		[in]Position->y = 56.922638
+		[in]Position->z = 0.750000
+		result = 0x603
+[00:00:17.254]	SQUALL_Channel_Start(0x603)
+[00:00:17.314]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 19.491564
+		[in]Position->y = 60.685638
+		[in]Position->z = 0.260000
+[00:00:17.381]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 19.808777
+		[in]Position->y = 60.877132
+		[in]Position->z = 0.260000
+[00:00:17.451]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 20.203476
+		[in]Position->y = 61.055199
+		[in]Position->z = 0.260000
+[00:00:17.514]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 20.514812
+		[in]Position->y = 61.158749
+		[in]Position->z = 0.260000
+[00:00:17.585]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 20.818144
+		[in]Position->y = 61.224457
+		[in]Position->z = 0.260000
+[00:00:17.650]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 21.113853
+		[in]Position->y = 61.254459
+		[in]Position->z = 0.260000
+[00:00:17.731]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 21.401495
+		[in]Position->y = 61.250648
+		[in]Position->z = 0.260000
+[00:00:17.801]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 21.681324
+		[in]Position->y = 61.215126
+		[in]Position->z = 0.260000
+[00:00:17.861]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 22.020714
+		[in]Position->y = 61.125317
+		[in]Position->z = 0.260000
+[00:00:17.931]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 22.287287
+		[in]Position->y = 61.026901
+		[in]Position->z = 0.260000
+[00:00:18.011]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 22.551403
+		[in]Position->y = 60.904041
+		[in]Position->z = 0.260000
+[00:00:18.081]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 22.814785
+		[in]Position->y = 60.759422
+		[in]Position->z = 0.260000
+[00:00:18.151]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 23.146662
+		[in]Position->y = 60.549122
+		[in]Position->z = 0.260000
+[00:00:18.221]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 23.416603
+		[in]Position->y = 60.365444
+		[in]Position->z = 0.260000
+[00:00:18.281]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 23.693359
+		[in]Position->y = 60.169315
+		[in]Position->z = 0.260000
+[00:00:18.354]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 23.979254
+		[in]Position->y = 59.963821
+		[in]Position->z = 0.260000
+[00:00:18.421]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 24.274031
+		[in]Position->y = 59.753929
+		[in]Position->z = 0.260000
+[00:00:18.481]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 24.581013
+		[in]Position->y = 59.541935
+		[in]Position->z = 0.260000
+[00:00:18.551]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 24.900579
+		[in]Position->y = 59.332066
+		[in]Position->z = 0.260000
+[00:00:18.621]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 25.232677
+		[in]Position->y = 59.128529
+		[in]Position->z = 0.260000
+[00:00:18.681]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 25.577574
+		[in]Position->y = 58.935013
+		[in]Position->z = 0.260000
+[00:00:18.755]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 25.934341
+		[in]Position->y = 58.755505
+		[in]Position->z = 0.260000
+[00:00:18.821]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 26.301697
+		[in]Position->y = 58.593082
+		[in]Position->z = 0.260000
+[00:00:18.881]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 26.678434
+		[in]Position->y = 58.450008
+		[in]Position->z = 0.260000
+[00:00:18.951]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 27.062922
+		[in]Position->y = 58.327499
+		[in]Position->z = 0.260000
+[00:00:19.021]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 27.454111
+		[in]Position->y = 58.225662
+		[in]Position->z = 0.260000
+[00:00:19.080]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 27.851563
+		[in]Position->y = 58.143810
+		[in]Position->z = 0.260000
+[00:00:19.151]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 28.255217
+		[in]Position->y = 58.080658
+		[in]Position->z = 0.260000
+[00:00:19.221]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 28.663536
+		[in]Position->y = 58.034603
+		[in]Position->z = 0.260000
+[00:00:19.291]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 29.046621
+		[in]Position->y = 57.991398
+		[in]Position->z = 0.260000
+[00:00:19.351]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 29.405930
+		[in]Position->y = 57.950871
+		[in]Position->z = 0.260000
+[00:00:19.421]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 29.743450
+		[in]Position->y = 57.912796
+		[in]Position->z = 0.260000
+[00:00:19.505]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 30.041649
+		[in]Position->y = 57.874424
+		[in]Position->z = 0.260000
+[00:00:19.572]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 30.305321
+		[in]Position->y = 57.836842
+		[in]Position->z = 0.260000
+[00:00:19.640]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 30.583548
+		[in]Position->y = 57.793625
+		[in]Position->z = 0.260000
+[00:00:19.704]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 30.775776
+		[in]Position->y = 57.763416
+		[in]Position->z = 0.260000
+[00:00:19.772]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 30.939758
+		[in]Position->y = 57.739159
+		[in]Position->z = 0.260000
+[00:00:19.844]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 31.077177
+		[in]Position->y = 57.722401
+		[in]Position->z = 0.260000
+[00:00:19.915]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 31.191307
+		[in]Position->y = 57.714134
+		[in]Position->z = 0.260000
+[00:00:19.972]	SQUALL_Listener_SetPosition(0xAFF780)
+		[in]Position->x = 31.298279
+		[in]Position->y = 57.706398
+		[in]Position->z = 0.260000

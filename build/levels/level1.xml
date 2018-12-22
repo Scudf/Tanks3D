@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Level width="16" height="16">
+	
+	<TankPlayer c="3" r="3"/>
+	
+	<TankBot c="6" r="6"/>
+	
+</Level>
